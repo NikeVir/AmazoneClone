@@ -1,75 +1,65 @@
 import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { Navbar, NavDropdown, FormControl, Button, Nav, Form, Container } from "react-bootstrap"
+import Login from "./components/Login";
+import Location from "./components/Location";
+import Cart from "./components/Cart";
 import Home from './components/Home';
-import RestaurantUpdate from './components/RestaurantUpdate';
-import RestaurantCreat from './components/RestaurantCreat';
-import RestaurantLogin from './components/RestaurantDetails';
-import RestaurantList from './components/RestaurantList';
-import RestaurantSearch from './components/RestaurantSearch';
-import { Navbar, NavDropdown, FormControl, Button, Nav, Form } from "react-bootstrap"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHome, faList, faPlus, faSearch, faSignInAlt } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { } from '@fortawesome/free-solid-svg-icons'
 
 function App() {
   return (
     <div className="App">
       <Router>
-        <Navbar expand="lg" className = "navbarrr">
-          <Navbar.Brand href="#">Amazon.in</Navbar.Brand>
-          <Navbar.Toggle aria-controls="navbarScroll" />
-          <Navbar.Collapse id="navbarScroll">
-            <Nav
-              className="mr-auto my-2 my-lg-0"
-              style={{ maxHeight: '100px' }}critic tonight acid myself accident diamond prize flight post inquiry cram inflict just wish giggle fuel together perfect define maple offer remind mirror ensure
-              navbarScroll
-            >
-              <span>Hello! address?</span>
-            <Form className="d-flex">
-              <FormControl
-                type="search"
-                placeholder="Search"
-                className="mr-2"
-                aria-label="Search"
-              />
-              <Button variant="outline-success">Search</Button>
-            </Form>
-              <Nav.Link href="#link"><Link to='/List'><FontAwesomeIcon icon={faList} />List</Link></Nav.Link>
-              <Nav.Link href="#link"><Link to='/Create'><FontAwesomeIcon icon={faPlus} />Create</Link></Nav.Link>
-              {/* <Nav.Link href="#link"><Link to='/Search'><FontAwesomeIcon icon={faSearch} />Search</Link></Nav.Link> */}
-              <Nav.Link href="#link"><Link to='/Login'><FontAwesomeIcon icon={faSignInAlt} />Login/Signin</Link></Nav.Link>
-              {/* <Nav.Link href="#link"><Link to='/Update'>Update</Link></Nav.Link> */}
-            </Nav>
-              <NavDropdown title="Link" id="navbarScrollingDropdown">
-                <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-                <NavDropdown.Item href="#action4">Another action</NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#action5">Something else here</NavDropdown.Item>
-              </NavDropdown>
-          </Navbar.Collapse>
+        <Navbar className="main_nav" collapseOnSelect expand="lg" bg="dark" variant="dark">
+          <Container className="navbar1">
+            <Navbar.Brand href="#home"><Link to='/'>React-Bootstrap</Link></Navbar.Brand>
+            <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+            <Navbar.Collapse id="responsive-navbar-nav">
+              <Nav className="me-auto">
+                <Nav.Link className="adress" href="#features"><Link to='/location'>Hello <p>select your adress</p></Link></Nav.Link>
+                <FormControl
+                  type="search"
+                  placeholder="Search"
+                  className="mr-2"
+                  aria-label="Search"
+                />
+                <Button className="search-btn" variant="outline-success">Search</Button>
+                <Nav.Link href="#pricing" className="navitems"><Link to='/Login'></Link>flag</Nav.Link>
+                <NavDropdown className="navitems" title="Hello! Sign In" id="collasible-nav-dropdown">
+                  <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+                  <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
+                  <Form className="d-flex">
+                  </Form>
+                  <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+                  <NavDropdown.Divider />
+                  <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
+                </NavDropdown>
+              </Nav>
+              <Nav>
+                <Nav.Link href="#deets" className="navitems"><Link to='/login'>Returns<p>andOrders</p></Link>x</Nav.Link>
+                <Nav.Link eventKey={2} href="#memes" className="navitems"><Link to='/cart'>Cart</Link>
+                  
+                </Nav.Link>
+              </Nav>
+            </Navbar.Collapse>
+          </Container>
         </Navbar>
-
-
-        <Route path='/Update/:id'
-          render={props => (<RestaurantUpdate {...props} />)}
-        >
-
-
+        <Route path='/login'>
+          <Login />
         </Route>
-        <Route path='/Create'>
-          <RestaurantCreat />
+        <Route path='/cart'>
+          <Cart/>
         </Route>
-        <Route path='/Login' render={props => (<RestaurantLogin{...props} />)} >
-        </Route>
-        <Route path='/List'>
-          <RestaurantList />
-        </Route>
-        <Route path='/Search'>
-          <RestaurantSearch />
+        <Route path='/location'>
+          <Location />
         </Route>
         <Route exact path='/'>
           <Home />
         </Route>
+
       </Router>
     </div>
   );
