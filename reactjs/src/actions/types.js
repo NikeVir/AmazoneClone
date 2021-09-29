@@ -1,0 +1,2 @@
+export const SEARCH_PRODUCTS = "SEARCH_PRODUCTS";
+export const FETCH_PRODUCTS =  "FETCH_PRODUCTS";

@@ -1,0 +1,77 @@
+ .home_container{
+    padding-top: 0px;
+    min-width:98%;
+    margin-left:1%;
+    margin-right:1%;
+    min-height:150vh;
+    z-index: -1;
+    display:flex;
+    flex-wrap:wrap;
+    padding-left:0px;
+    padding-right:0px;
+    position:relative;
+  
+  }
+  .product-container{
+    position: relative;
+    top:-100px;
+    flex-basis: 100%;
+    padding-top: 0px;
+    min-width:100%;
+    min-height:150vh;
+    display:flex;
+    flex-wrap:wrap;
+    padding-left:0px;
+    padding-right:0px;
+    background-color: transparent;
+    z-index: 1;
+  }
+  .product{
+    flex-basis:24%;
+    box-sizing: border-box;
+    min-width:220px;
+    height:420px;
+    margin-top:15px;
+    margin-bottom:15px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  .product p{
+    margin:10px;
+    margin-left: 0;
+  }
+  .product-title{
+    margin: 10px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .product-image{
+    width: 100%;
+    /* border: 2px solid red; */
+  }
+  .product-image img{
+    box-sizing: border-box;
+    width: 100%;
+  }
+  .baner{
+    flex-basis:100%;
+    max-width:100%;
+    border:2px solid red;
+    height:420px;
+  }
+  .ad-baner{
+    flex-basis:100%;
+    min-width:100%;
+    width:100%;
+    z-index:-1;
+    margin:0px;
+    margin-bottom: -150px;
+    mask-image: linear-gradient(to bottom,rgba(0,0,0,1),rgba(0,0,0,0));
+    padding:0px;
+  }
+  .ad-baner img{
+    width: 100%;
+    height:100%;  
+    object-fit: fill;
+    margin:0px;
+  } 

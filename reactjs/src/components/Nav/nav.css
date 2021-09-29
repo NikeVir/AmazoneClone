@@ -1,0 +1,103 @@
+.navbar1 .container {
+    background-color: #000000;
+  }
+  .navbar {
+    overflow: hidden;
+    height:60px;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    padding:0px;
+    z-index:2;
+    box-sizing: border-box;
+  }
+  .navbar-dark .navbar-nav .nav-link{
+    color: white;
+  }
+   
+  /* .navbar Form{
+    width: 60%;
+    border: 2px solid red;
+    height:45px;
+    position:relative;
+    left:-80px;
+    margin-top:15px
+  } */
+  .amazon-logo{
+      margin: 0px;
+      /* border: 2px solid red; */
+      position: relative;
+      width: 10%;
+      left: -100px;
+  }
+  .adress{
+    position:relative;
+    left:-100px;
+    min-width:150px;
+  }
+  .address{
+      text-decoration: none;
+      color: white;
+      font-size: 14px;
+  }
+  .address svg{
+      margin-right: 3px;
+  }
+  .navbar Form{
+      min-width:800px;
+      /* border: 2px solid red; */
+      display: flex;
+      position: relative;
+      left: -100px;
+      padding: 5px;
+  }
+  .mr-2{
+      /* min-width: 50%; */
+      min-width: 100%;
+      max-height: 40px;
+      margin: auto;
+      margin-bottom: 17px;
+  }
+  .search-btn{
+      width: 10%;
+      max-height: 40px;
+    position:absolute;
+    right: 0;
+    margin: 0;
+    /* margin: auto; */
+      margin-top:12px;
+      margin-right:5px ;
+  }
+  .navitems{
+    position:relative;
+    left:-100px;
+    /* border: 2px solid red; */
+    /* padding-top:20px ; */
+    min-width: 100px;
+    max-height: 50px;
+    margin-top: 10px;
+  }
+  .navitems Link{
+      color:white;
+  }
+  .navorder{
+    position:relative;
+    left:-100px;
+    /* border: 2px solid red; */
+    /* margin: 0px; */
+    min-width: 200px;
+    max-height: 60px;
+    padding: 0;
+    /* padding-top:20px ; */
+  }
+  .navcart{
+      position: relative;
+      left: -100px;
+      /* border: 2px solid red; */
+      min-width: 100px;
+  }
+  /*
+
+  
+  
+   */
