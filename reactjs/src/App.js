@@ -1,32 +1,36 @@
-import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import { Navbar, NavDropdown, FormControl, Button, Nav, Form, Container } from "react-bootstrap"
-import Login from "./components/Login";
+// import SignUp from "./components/authentication/Signup";
+import Login from './components/authentication/Login';
 import Location from "./components/Location";
-import Cart from "./components/Cart";
-import Home from './components/Home';
+import Cart from "./components/cart/Cart";
+import Home from './components/Home/Home';
 import Mainnavbar from './components/Nav/Navbar';
 import ResultPage from './components/ResultPage';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import UploadProducts from './components/UploadProducts';
+import ViewProduct from './components/viewProduct/viewProduct';
 import { } from '@fortawesome/free-solid-svg-icons'
-import store from './store';
-import { Provider } from 'react-redux';
-function App() {
+import { connect } from 'react-redux';
+import SignUp from './components/authentication/Signup';
+function App({ current }) {
   return (
     <div className="App">
-      <Provider store = {store}>
       <Router>
         <Mainnavbar
         home = "/"
         adress ="/location"
-        cart = "/cart"
-        login = "/login"
+        cartpage = "/cartpage"
+        login = "/SignUp"
+        upload = "/upload"
+        resultpage = './resultpage'
         />
+        <Route path='/SignUp'>
+          <SignUp />
+        </Route>
         <Route path='/login'>
           <Login />
         </Route>
-        <Route path='/cart'>
+        <Route path='/cartpage'>
           <Cart/>
         </Route>
         <Route path='/location'>
@@ -35,14 +39,30 @@ function App() {
         <Route path='/resultpage'>
           <ResultPage />
         </Route>
+        <Route path='/upload'>
+          <UploadProducts />
+        </Route>{!current ? (
+            <Redirect to="/" />
+          ) : (
+            <Route exact path="/product/:id">
+          <ViewProduct />
+        </Route>
+          )}
+        
         <Route exact path='/'>
           <Home />
         </Route>
+        
 
       </Router>
-    </Provider>
     </div>
   );
 }
 
-export default App;
+const mapStateToProps = (state) => {
+  return {
+    current: state.products.currentItem,
+  };
+};
+
+export default connect(mapStateToProps)(App);

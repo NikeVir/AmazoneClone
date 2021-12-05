@@ -1,0 +1,58 @@
+.login_form{
+    width: 350px;
+    min-height: 50vh;
+    max-height: 80vh;
+    display: inline-block;
+    margin: auto;
+    margin-top:20px;
+    border: 0.2px solid rgb(201, 201, 201);
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.19);
+    padding: 30px;
+    text-align: left;
+  }
+  .login_form h2{
+      font-weight:  400;
+  }
+  .login_form .bottom_line{
+      font-size: 12px;
+      padding-top: 10px;
+      border-top: 0.2px solid grey;
+  }
+  .login-btn{
+    background: linear-gradient(to bottom,#f7dfa5,#f0c14b);
+    width: 100%;
+    color: #000000;
+    height: 35px;
+    text-align: center;
+    font-size: 14px;
+    padding: auto;
+    margin: auto;
+  }
+  .mb-3{
+    font-family: Arial,sans-serif;
+    font-weight: bold;
+    font-size: 13px;
+
+  }
+  .mb-3 i{
+      margin: 0 5px;
+      font-size: 15px;
+      font-family: cursive;
+
+  }
+  .legal-txt{
+    margin-top: 18px;
+    font-size: 12px;
+    font-family: sans-serif;
+    
+  }
+  .login-box{
+    border: 0.2px solid rgb(103, 103, 103);
+    height: 30px;
+    font-size: 13px;
+    font-family: sans-serif;
+  }
+
+  .d-flex{
+    width: 800px;
+  }
