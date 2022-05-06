@@ -16,4 +16,4 @@ const signUpTemplate = new mongoose.Schema({
         min:6
     },
 })
-module.exports = mongoose.model('newTable',signUpTemplate)
+module.exports = mongoose.model('newtables',signUpTemplate)
